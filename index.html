@@ -12,7 +12,7 @@
 
     <style>
         :root {
-            --accent: #2563eb;
+            --accent: #f7931a;
             --dark: #0f172a;
             --light-gray: #f8fafc;
         }
@@ -53,8 +53,9 @@
 
         .hero {
             height: 95vh;
-            background: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.4)),
-                url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e") center/cover no-repeat;
+            background:
+                linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)),
+                url("https://images.unsplash.com/photo-1621761191319-c6fb62004040") center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -84,13 +85,13 @@
             background-color: var(--accent);
             color: white;
             border: none;
-            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 10px 20px rgba(247, 147, 26, 0.3);
         }
 
         .btn-primary-custom:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
-            background-color: #1d4ed8;
+            box-shadow: 0 15px 30px rgba(247, 147, 26, 0.4);
+            background-color: #e48310;
         }
 
         .section-title {
@@ -130,7 +131,7 @@
         }
 
         .badge-soft {
-            background: rgba(37, 99, 235, 0.1);
+            background: rgba(247, 147, 26, 0.1);
             color: var(--accent);
             padding: 6px 16px;
             border-radius: 50px;
@@ -164,17 +165,19 @@
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">DEST<span class="text-primary">.</span></a>
+            <a class="navbar-brand" href="#">BIT<span style="color:#f7931a">.</span></a>
+
             <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link px-3" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#beaches">Destinations</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#nature">Nature</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#features">Technology</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#features">Blockchain</a></li>
                     <li class="nav-item ms-lg-4">
-                        <a class="btn btn-pill btn-primary-custom" href="#contact">Contact</a>
+                        <a class="btn btn-pill btn-primary-custom" href="#contact">Join</a>
                     </li>
                 </ul>
             </div>
@@ -183,18 +186,22 @@
 
     <header class="hero">
         <div class="container text-white">
-            <h1 class="mb-4">Beyond the Horizon.</h1>
-            <p class="lead mb-5 opacity-75 fs-4 fw-light mx-auto" style="max-width: 600px;">
-                Escape the ordinary and discover landscapes that breathe life into your dreams.
+            <h1 class="mb-4">The Future of Money.</h1>
+
+            <p class="lead mb-5 opacity-75 fs-4 fw-light mx-auto" style="max-width:600px;">
+                Bitcoin is a decentralized digital currency that empowers individuals and removes the need for banks.
             </p>
+
             <div class="d-flex justify-content-center gap-3">
-                <a href="#beaches" class="btn btn-pill btn-primary-custom">Explore Places</a>
-                <a href="#" class="btn btn-pill btn-outline-light px-5">Our Story</a>
+                <a href="#features" class="btn btn-pill btn-primary-custom">Learn Bitcoin</a>
+                <a href="#" class="btn btn-pill btn-outline-light px-5">Whitepaper</a>
             </div>
+
         </div>
     </header>
 
     <section id="bitcoin" class="py-5 mt-5">
+    <section id="features" class="py-5 mt-5">
 
         <div class="container py-5">
 
@@ -207,6 +214,8 @@
                         Explore the technologies powering decentralized digital currency.
                     </p>
 
+                    <h2 class="section-title">Bitcoin Technology</h2>
+                    <p class="text-muted fs-5">The innovation behind decentralized digital currency.</p>
                 </div>
             </div>
 
@@ -226,6 +235,12 @@
                         <p class="text-muted small">
                             Thousands of nodes worldwide secure the Bitcoin network.
                         </p>
+                            <img src="https://images.unsplash.com/photo-1518544887877-3d54c37e9b20">
+                        </div>
+
+                        <span class="badge-soft">Decentralized</span>
+                        <h4 class="fw-bold">Peer to Peer</h4>
+                        <p class="text-muted small">Send payments directly without banks.</p>
 
                     </div>
                 </div>
@@ -244,6 +259,12 @@
                         <p class="text-muted small">
                             An immutable digital ledger that records every Bitcoin transaction.
                         </p>
+                            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0">
+                        </div>
+
+                        <span class="badge-soft">Secure</span>
+                        <h4 class="fw-bold">Blockchain</h4>
+                        <p class="text-muted small">Transactions verified by a global distributed ledger.</p>
 
                     </div>
                 </div>
@@ -262,6 +283,12 @@
                         <p class="text-muted small">
                             A scarce asset with a fixed supply of only 21 million coins.
                         </p>
+                            <img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476">
+                        </div>
+
+                        <span class="badge-soft">Limited</span>
+                        <h4 class="fw-bold">21 Million Supply</h4>
+                        <p class="text-muted small">Scarcity built into the protocol.</p>
 
                     </div>
                 </div>
@@ -273,13 +300,20 @@
     </section>
 
     <section class="cta-section text-center">
-        <div class="container">
-            <h2 class="display-4 fw-bold mb-4">Your Next Story Starts Here.</h2>
-            <p class="lead mb-5 opacity-50">Join 50,000+ explorers worldwide.</p>
-            <a href="#" class="btn btn-pill btn-light btn-lg px-5">Begin Journey</a>
-        </div>
-    </section>
 
+        <div class="container">
+
+            <h2 class="display-4 fw-bold mb-4">Start Your Bitcoin Journey.</h2>
+
+            <p class="lead mb-5 opacity-50">
+                Join millions adopting the world's first decentralized currency.
+            </p>
+
+            <a href="#" class="btn btn-pill btn-light btn-lg px-5">Get Started</a>
+
+        </div>
+
+    </section>
     <footer id="contact">
 
         <div class="container">
