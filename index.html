@@ -2,381 +2,372 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DEST. | Adventure Awaits</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DEST. | Adventure Awaits</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-        :root {
-            --accent: #f7931a;
-            --dark: #0f172a;
-            --light-gray: #f8fafc;
-        }
+<style>
 
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--dark);
-            background-color: #fff;
-            overflow-x: hidden;
-        }
+:root{
+--accent:#f7931a;
+--dark:#0f172a;
+--light-gray:#f8fafc;
+}
 
-        .navbar {
-            padding: 20px 0;
-            background: rgba(255, 255, 255, 0.8) !important;
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        }
+body{
+font-family:'Plus Jakarta Sans',sans-serif;
+color:var(--dark);
+background:#fff;
+overflow-x:hidden;
+}
 
-        .navbar-brand {
-            font-weight: 800;
-            letter-spacing: -1.5px;
-            font-size: 1.75rem;
-            color: var(--dark) !important;
-        }
+.navbar{
+padding:20px 0;
+background:rgba(255,255,255,0.85)!important;
+backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(0,0,0,0.05);
+}
 
-        .nav-link {
-            font-weight: 600;
-            font-size: 0.95rem;
-            color: var(--dark) !important;
-            opacity: 0.7;
-            transition: 0.3s;
-        }
+.navbar-brand{
+font-weight:800;
+letter-spacing:-1.5px;
+font-size:1.75rem;
+color:var(--dark)!important;
+}
 
-        .nav-link:hover {
-            opacity: 1;
-            color: var(--accent) !important;
-        }
+.nav-link{
+font-weight:600;
+font-size:0.95rem;
+color:var(--dark)!important;
+opacity:.7;
+transition:.3s;
+}
 
-        .hero {
-            height: 95vh;
-            background:
-                linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.6)),
-                url("https://images.unsplash.com/photo-1621761191319-c6fb62004040") center/cover no-repeat;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            border-radius: 0 0 40px 40px;
-            margin: 0 15px;
-        }
+.nav-link:hover{
+opacity:1;
+color:var(--accent)!important;
+}
 
-        .hero h1 {
-            font-size: clamp(2.5rem, 10vw, 5.5rem);
-            font-weight: 800;
-            letter-spacing: -3px;
-            line-height: 1;
-        }
+.hero{
+height:95vh;
+background:
+linear-gradient(rgba(15,23,42,.6),rgba(15,23,42,.6)),
+url("https://images.unsplash.com/photo-1621761191319-c6fb62004040") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+border-radius:0 0 40px 40px;
+margin:0 15px;
+}
 
-        .btn-pill {
-            padding: 14px 35px;
-            border-radius: 100px;
-            font-weight: 700;
-            transition: all 0.4s ease;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 1px;
-        }
+.hero h1{
+font-size:clamp(2.5rem,10vw,5.5rem);
+font-weight:800;
+letter-spacing:-3px;
+line-height:1;
+}
 
-        .btn-primary-custom {
-            background-color: var(--accent);
-            color: white;
-            border: none;
-            box-shadow: 0 10px 20px rgba(247, 147, 26, 0.3);
-        }
+.btn-pill{
+padding:14px 35px;
+border-radius:100px;
+font-weight:700;
+transition:.4s;
+text-transform:uppercase;
+font-size:.8rem;
+letter-spacing:1px;
+}
 
-        .btn-primary-custom:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(247, 147, 26, 0.4);
-            background-color: #e48310;
-        }
+.btn-primary-custom{
+background:var(--accent);
+color:white;
+border:none;
+box-shadow:0 10px 20px rgba(247,147,26,.3);
+}
 
-        .section-title {
-            font-weight: 800;
-            font-size: 2.5rem;
-            letter-spacing: -1px;
-            margin-bottom: 1rem;
-        }
+.btn-primary-custom:hover{
+transform:translateY(-3px);
+box-shadow:0 15px 30px rgba(247,147,26,.4);
+background:#e48310;
+}
 
-        .dest-card {
-            border: none;
-            background: transparent;
-            transition: transform 0.4s ease;
-        }
+.section-title{
+font-weight:800;
+font-size:2.5rem;
+letter-spacing:-1px;
+margin-bottom:1rem;
+}
 
-        .dest-card:hover {
-            transform: translateY(-10px);
-        }
+.dest-card{
+border:none;
+background:transparent;
+transition:transform .4s;
+}
 
-        .dest-img-container {
-            border-radius: 24px;
-            overflow: hidden;
-            aspect-ratio: 3/4;
-            margin-bottom: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
+.dest-card:hover{
+transform:translateY(-10px);
+}
 
-        .dest-img-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
+.dest-img-container{
+border-radius:24px;
+overflow:hidden;
+aspect-ratio:3/4;
+margin-bottom:20px;
+box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
 
-        .dest-card:hover img {
-            transform: scale(1.1);
-        }
+.dest-img-container img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:transform .6s;
+}
 
-        .badge-soft {
-            background: rgba(247, 147, 26, 0.1);
-            color: var(--accent);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 0.75rem;
-            display: inline-block;
-            margin-bottom: 12px;
-        }
+.dest-card:hover img{
+transform:scale(1.1);
+}
 
-        .cta-section {
-            background: var(--dark);
-            border-radius: 40px;
-            padding: 80px 20px;
-            margin: 100px 15px;
-            color: white;
-        }
+.badge-soft{
+background:rgba(247,147,26,.1);
+color:var(--accent);
+padding:6px 16px;
+border-radius:50px;
+font-weight:700;
+font-size:.75rem;
+display:inline-block;
+margin-bottom:12px;
+}
 
-        footer {
-            padding: 60px 0;
-            border-top: 1px solid #eee;
-        }
+.cta-section{
+background:var(--dark);
+border-radius:40px;
+padding:80px 20px;
+margin:100px 15px;
+color:white;
+}
 
-        footer h5 {
-            font-weight: 800;
-            letter-spacing: -1px;
-        }
-    </style>
+footer{
+padding:60px 0;
+border-top:1px solid #eee;
+}
+
+footer h5{
+font-weight:800;
+letter-spacing:-1px;
+}
+
+</style>
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">BIT<span style="color:#f7931a">.</span></a>
+<nav class="navbar navbar-expand-lg sticky-top navbar-light">
+<div class="container">
 
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<a class="navbar-brand" href="#">BIT<span style="color:#f7931a">.</span></a>
 
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link px-3" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#features">Technology</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#features">Blockchain</a></li>
-                    <li class="nav-item ms-lg-4">
-                        <a class="btn btn-pill btn-primary-custom" href="#contact">Join</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+<span class="navbar-toggler-icon"></span>
+</button>
 
-    <header class="hero">
-        <div class="container text-white">
-            <h1 class="mb-4">The Future of Money.</h1>
+<div class="collapse navbar-collapse" id="navMenu">
+<ul class="navbar-nav ms-auto align-items-center">
 
-            <p class="lead mb-5 opacity-75 fs-4 fw-light mx-auto" style="max-width:600px;">
-                Bitcoin is a decentralized digital currency that empowers individuals and removes the need for banks.
-            </p>
+<li class="nav-item"><a class="nav-link px-3" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link px-3" href="#features">Technology</a></li>
+<li class="nav-item"><a class="nav-link px-3" href="#features">Blockchain</a></li>
 
-            <div class="d-flex justify-content-center gap-3">
-                <a href="#features" class="btn btn-pill btn-primary-custom">Learn Bitcoin</a>
-                <a href="#" class="btn btn-pill btn-outline-light px-5">Whitepaper</a>
-            </div>
+<li class="nav-item ms-lg-4">
+<a class="btn btn-pill btn-primary-custom" href="#contact">Join</a>
+</li>
 
-        </div>
-    </header>
+</ul>
+</div>
 
-    <section id="bitcoin" class="py-5 mt-5">
-    <section id="features" class="py-5 mt-5">
+</div>
+</nav>
 
-        <div class="container py-5">
+<header class="hero">
 
-            <div class="row align-items-end mb-5">
-                <div class="col-lg-6">
+<div class="container text-white">
 
-                    <h2 class="section-title">Bitcoin Ecosystem</h2>
+<h1 class="mb-4">The Future of Money.</h1>
 
-                    <p class="text-muted fs-5">
-                        Explore the technologies powering decentralized digital currency.
-                    </p>
+<p class="lead mb-5 opacity-75 fs-4 fw-light mx-auto" style="max-width:600px;">
+Bitcoin is a decentralized digital currency that empowers individuals and removes the need for banks.
+</p>
 
-                    <h2 class="section-title">Bitcoin Technology</h2>
-                    <p class="text-muted fs-5">The innovation behind decentralized digital currency.</p>
-                </div>
-            </div>
+<div class="d-flex justify-content-center gap-3">
+<a href="#features" class="btn btn-pill btn-primary-custom">Learn Bitcoin</a>
+<a href="#" class="btn btn-pill btn-outline-light px-5">Whitepaper</a>
+</div>
 
-            <div class="row g-5">
+</div>
 
-                <div class="col-md-4">
-                    <div class="dest-card">
+</header>
 
-                        <div class="dest-img-container">
-                            <img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d" alt="">
-                        </div>
+<section id="features" class="py-5 mt-5">
 
-                        <span class="badge-soft">Security</span>
+<div class="container py-5">
 
-                        <h4 class="fw-bold">Decentralized Network</h4>
+<div class="row align-items-end mb-5">
+<div class="col-lg-6">
 
-                        <p class="text-muted small">
-                            Thousands of nodes worldwide secure the Bitcoin network.
-                        </p>
-                            <img src="https://images.unsplash.com/photo-1518544887877-3d54c37e9b20">
-                        </div>
+<h2 class="section-title">Bitcoin Technology</h2>
 
-                        <span class="badge-soft">Decentralized</span>
-                        <h4 class="fw-bold">Peer to Peer</h4>
-                        <p class="text-muted small">Send payments directly without banks.</p>
+<p class="text-muted fs-5">
+Explore the technologies powering decentralized digital currency.
+</p>
 
-                    </div>
-                </div>
+</div>
+</div>
 
-                <div class="col-md-4">
-                    <div class="dest-card">
+<div class="row g-5">
 
-                        <div class="dest-img-container">
-                            <img src="https://images.unsplash.com/photo-1622630998477-20aa696ecb05" alt="">
-                        </div>
+<div class="col-md-4">
 
-                        <span class="badge-soft">Technology</span>
+<div class="dest-card">
 
-                        <h4 class="fw-bold">Blockchain</h4>
+<div class="dest-img-container">
+<img src="https://images.unsplash.com/photo-1518546305927-5a555bb7020d" alt="Bitcoin nodes">
+</div>
 
-                        <p class="text-muted small">
-                            An immutable digital ledger that records every Bitcoin transaction.
-                        </p>
-                            <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0">
-                        </div>
+<span class="badge-soft">Security</span>
 
-                        <span class="badge-soft">Secure</span>
-                        <h4 class="fw-bold">Blockchain</h4>
-                        <p class="text-muted small">Transactions verified by a global distributed ledger.</p>
+<h4 class="fw-bold">Decentralized Network</h4>
 
-                    </div>
-                </div>
+<p class="text-muted small">
+Thousands of nodes worldwide secure the Bitcoin network.
+</p>
 
-                <div class="col-md-4">
-                    <div class="dest-card">
+</div>
 
-                        <div class="dest-img-container">
-                            <img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476" alt="">
-                        </div>
+</div>
 
-                        <span class="badge-soft">Investment</span>
+<div class="col-md-4">
 
-                        <h4 class="fw-bold">Digital Gold</h4>
+<div class="dest-card">
 
-                        <p class="text-muted small">
-                            A scarce asset with a fixed supply of only 21 million coins.
-                        </p>
-                            <img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476">
-                        </div>
+<div class="dest-img-container">
+<img src="https://images.unsplash.com/photo-1622630998477-20aa696ecb05" alt="Blockchain">
+</div>
 
-                        <span class="badge-soft">Limited</span>
-                        <h4 class="fw-bold">21 Million Supply</h4>
-                        <p class="text-muted small">Scarcity built into the protocol.</p>
+<span class="badge-soft">Technology</span>
 
-                    </div>
-                </div>
+<h4 class="fw-bold">Blockchain</h4>
 
-            </div>
+<p class="text-muted small">
+An immutable digital ledger that records every Bitcoin transaction.
+</p>
 
-        </div>
+</div>
 
-    </section>
+</div>
 
-    <section class="cta-section text-center">
+<div class="col-md-4">
 
-        <div class="container">
+<div class="dest-card">
 
-            <h2 class="display-4 fw-bold mb-4">Start Your Bitcoin Journey.</h2>
+<div class="dest-img-container">
+<img src="https://images.unsplash.com/photo-1640161704729-cbe966a08476" alt="Bitcoin investment">
+</div>
 
-            <p class="lead mb-5 opacity-50">
-                Join millions adopting the world's first decentralized currency.
-            </p>
+<span class="badge-soft">Investment</span>
 
-            <a href="#" class="btn btn-pill btn-light btn-lg px-5">Get Started</a>
+<h4 class="fw-bold">Digital Gold</h4>
 
-        </div>
+<p class="text-muted small">
+Bitcoin has a fixed supply of only 21 million coins.
+</p>
 
-    </section>
-    <footer id="contact">
+</div>
 
-        <div class="container">
+</div>
 
-            <div class="row g-5">
+</div>
 
-                <div class="col-md-6">
+</div>
 
-                    <h5 class="mb-4">BITCOIN</h5>
+</section>
 
-                    <p class="text-muted" style="max-width:350px;">
-                        Educating the world about Bitcoin, blockchain technology, and financial freedom through
-                        decentralized systems.
-                    </p>
+<section class="cta-section text-center">
 
-                </div>
+<div class="container">
 
-                <div class="col-md-3">
+<h2 class="display-4 fw-bold mb-4">Start Your Bitcoin Journey.</h2>
 
-                    <h6 class="fw-bold mb-3">Links</h6>
+<p class="lead mb-5 opacity-50">
+Join millions adopting the world's first decentralized currency.
+</p>
 
-                    <ul class="list-unstyled text-muted small">
+<a href="#" class="btn btn-pill btn-light btn-lg px-5">Get Started</a>
 
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-reset">Terms of Service</a></li>
+</div>
 
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-reset">Privacy Policy</a></li>
+</section>
 
-                        <li class="mb-2"><a href="#" class="text-decoration-none text-reset">Resources</a></li>
+<footer id="contact">
 
-                    </ul>
+<div class="container">
 
-                </div>
+<div class="row g-5">
 
-                <div class="col-md-3">
+<div class="col-md-6">
 
-                    <h6 class="fw-bold mb-3">Newsletter</h6>
+<h5 class="mb-4">BITCOIN</h5>
 
-                    <div class="input-group">
+<p class="text-muted" style="max-width:350px;">
+Educating the world about Bitcoin, blockchain technology, and financial freedom through decentralized systems.
+</p>
 
-                        <input type="email" class="form-control border-0 bg-light" placeholder="Email Address">
+</div>
 
-                        <button class="btn btn-dark btn-sm px-3">Join</button>
+<div class="col-md-3">
 
-                    </div>
+<h6 class="fw-bold mb-3">Links</h6>
 
-                </div>
+<ul class="list-unstyled text-muted small">
 
-            </div>
+<li class="mb-2"><a href="#" class="text-decoration-none text-reset">Terms of Service</a></li>
+<li class="mb-2"><a href="#" class="text-decoration-none text-reset">Privacy Policy</a></li>
+<li class="mb-2"><a href="#" class="text-decoration-none text-reset">Resources</a></li>
 
-            <div class="mt-5 pt-4 border-top text-center">
+</ul>
 
-                <p class="small text-muted mb-0">
-                    © 2026 Bitcoin Network | Decentralized Future
-                </p>
+</div>
 
-            </div>
+<div class="col-md-3">
 
-        </div>
+<h6 class="fw-bold mb-3">Newsletter</h6>
 
-    </footer>
+<div class="input-group">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<input type="email" class="form-control border-0 bg-light" placeholder="Email Address">
+
+<button class="btn btn-dark btn-sm px-3">Join</button>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="mt-5 pt-4 border-top text-center">
+
+<p class="small text-muted mb-0">
+© 2026 Bitcoin Network | Decentralized Future
+</p>
+
+</div>
+
+</div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
-
 </html>
